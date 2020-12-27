@@ -28,3 +28,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim
 :PluginInstall
 ```
+
+## Setting up tmux
+
+1. Soft link the `tmux/.tmux.conf` to home directory. Automate the process by using `tmux/deploy.sh`.

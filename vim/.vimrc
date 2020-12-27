@@ -66,7 +66,7 @@ set relativenumber
 set cursorline
 hi cursorline cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
 
-filetype on
+" filetype on
 
 set smartindent
 set softtabstop=4
