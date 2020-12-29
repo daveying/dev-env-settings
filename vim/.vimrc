@@ -79,5 +79,11 @@ set showmatch " show matching brackets
 set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 
+" Resize window
+nnoremap <C-l> :vertical resize +5<CR>
+nnoremap <C-h> :vertical resize -5<CR>
+nnoremap <C-j> :resize +5<CR>
+nnoremap <C-k> :resize -5<CR>
+
 " ================== End of My settings ==================
 " ========================================================
