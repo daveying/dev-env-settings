@@ -7,6 +7,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'benmills/vimux'
 call vundle#end()
 
 filetype plugin indent on
@@ -17,6 +20,12 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 autocmd BufWinEnter * silent NERDTreeMirror
 " Allow NERDTree show hidden files by default
 let NERDTreeShowHidden=1
+
+" Settings based on vimux plugin
+nnoremap <F6> :call VimuxRunCommand("git status")<CR>
+nnoremap <F7> :call VimuxRunCommand("git diff")<CR>
+nnoremap <F8> :call VimuxRunCommand("git log")<CR>
+nnoremap <F9> :call VimuxSendKeys("q")<CR>
 
 " ================ End of install plugins ================
 " ========================================================
@@ -62,6 +71,7 @@ packadd matchit
 
 set number
 set relativenumber
+hi LineNr cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
 
 set cursorline
 hi cursorline cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
@@ -80,10 +90,10 @@ set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 
 " Resize window
-nnoremap <C-l> :vertical resize +5<CR>
-nnoremap <C-h> :vertical resize -5<CR>
-nnoremap <C-j> :resize +5<CR>
-nnoremap <C-k> :resize -5<CR>
+nnoremap <C-l> :vertical resize +4<CR>
+nnoremap <C-h> :vertical resize -4<CR>
+nnoremap <C-j> :resize +4<CR>
+nnoremap <C-k> :resize -4<CR>
 
 " ================== End of My settings ==================
 " ========================================================
