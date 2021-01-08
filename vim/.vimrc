@@ -22,6 +22,7 @@ autocmd BufWinEnter * silent NERDTreeMirror
 let NERDTreeShowHidden=1
 
 " Settings based on vimux plugin
+nnoremap <F5> :call VimuxRunCommand("make all")<CR>
 nnoremap <F6> :call VimuxRunCommand("git status")<CR>
 nnoremap <F7> :call VimuxRunCommand("git diff")<CR>
 nnoremap <F8> :call VimuxRunCommand("git log")<CR>
