@@ -22,7 +22,7 @@ autocmd BufWinEnter * silent NERDTreeMirror
 let NERDTreeShowHidden=1
 
 " Settings based on vimux plugin
-nnoremap <F5> :call VimuxRunCommand("make all")<CR>
+nnoremap <F5> :call VimuxRunCommand("make run")<CR>
 nnoremap <F6> :call VimuxRunCommand("git status")<CR>
 nnoremap <F7> :call VimuxRunCommand("git diff")<CR>
 nnoremap <F8> :call VimuxRunCommand("git log")<CR>
@@ -76,6 +76,7 @@ hi LineNr cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
 
 set cursorline
 hi cursorline cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
+hi cursorlinenr cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
 
 " filetype on
 
