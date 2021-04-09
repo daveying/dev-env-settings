@@ -72,11 +72,11 @@ packadd matchit
 
 set number
 set relativenumber
-hi LineNr cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
+hi LineNr cterm=NONE ctermbg=black
 
 set cursorline
-hi cursorline cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
-hi cursorlinenr cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
+hi cursorline cterm=NONE ctermbg=darkgrey
+hi cursorlinenr cterm=NONE ctermbg=darkgrey
 
 " filetype on
 
