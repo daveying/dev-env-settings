@@ -48,6 +48,8 @@ set incsearch   " do incremental searching
 if has('mouse')
   set mouse=a
 endif
+" For widescreens
+set ttymouse=sgr
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
