@@ -19,14 +19,14 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * silent NERDTreeMirror
 " Allow NERDTree show hidden files by default
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 
 " Settings based on vimux plugin
-nnoremap <F5> :call VimuxRunCommand("make run")<CR>
+" nnoremap <F5> :call VimuxRunCommand("make run")<CR>
 nnoremap <F6> :call VimuxRunCommand("git status")<CR>
 nnoremap <F7> :call VimuxRunCommand("git diff")<CR>
 nnoremap <F8> :call VimuxRunCommand("git log")<CR>
-nnoremap <F9> :call VimuxSendKeys("q")<CR>
+nnoremap <F9> :call VimuxRunCommand("fc -e : -1")<CR>
 
 " ================ End of install plugins ================
 " ========================================================
@@ -72,13 +72,20 @@ endif
 " compatible.
 packadd matchit
 
+" command order matters
+colorscheme elflord
+
 set number
 set relativenumber
-hi LineNr cterm=NONE ctermbg=black
+" ctermfg x178_Gold3
+hi LineNr cterm=NONE ctermfg=178 ctermbg=black
 
 set cursorline
-hi cursorline cterm=NONE ctermbg=darkgrey
-hi cursorlinenr cterm=NONE ctermbg=darkgrey
+" ctermbg x235_Grey18
+hi cursorline ctermbg=235 cterm=None
+" ctermbg x235_Grey18
+" ctermfg x220_Gold1
+hi cursorlinenr ctermbg=235 ctermfg=220 cterm=bold
 
 " filetype on
 
@@ -98,6 +105,9 @@ nnoremap <C-l> :vertical resize +4<CR>
 nnoremap <C-h> :vertical resize -4<CR>
 nnoremap <C-j> :resize +4<CR>
 nnoremap <C-k> :resize -4<CR>
+
+" Ctags
+set tags=tags;/
 
 " ================== End of My settings ==================
 " ========================================================
