@@ -20,6 +20,29 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 autocmd BufWinEnter * silent NERDTreeMirror
 " Allow NERDTree show hidden files by default
 " let NERDTreeShowHidden=1
+" switch NERDTree tabs
+map <Esc>y <A-y>
+map <Esc>n <A-n>
+map <Esc>1 <A-1>
+map <Esc>2 <A-2>
+map <Esc>3 <A-3>
+map <Esc>4 <A-4>
+map <Esc>5 <A-5>
+map <Esc>6 <A-6>
+map <Esc>7 <A-7>
+map <Esc>8 <A-8>
+map <Esc>9 <A-9>
+nnoremap <A-y> gT
+nnoremap <A-n> gt
+nnoremap <A-1> 1gt
+nnoremap <A-2> 2gt
+nnoremap <A-3> 3gt
+nnoremap <A-4> 4gt
+nnoremap <A-5> 5gt
+nnoremap <A-6> 6gt
+nnoremap <A-7> 7gt
+nnoremap <A-8> 8gt
+nnoremap <A-9> 9gt
 
 " Settings based on vimux plugin
 " nnoremap <F5> :call VimuxRunCommand("make run")<CR>
