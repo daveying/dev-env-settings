@@ -29,6 +29,23 @@ vim
 :PluginInstall
 ```
 
+5. Coc configuration
+- Coc repo: https://github.com/neoclide/coc.nvim
+- After installed by vundle, the dependencies of coc.nvim need to be installed by going into the install path of coc.nvim and run `yarn install` (Install yarn using npm if neccessary)
+- Then install coc json plugin and tsserver plugin inside vim command line using:
+```bash
+:CocInstall coc-json coc-tssever coc-html coc-clangd # already in the .vimrc file
+```
+- Install clangd (not neccessary install on local): https://clangd.llvm.org/installation.html
+```bash
+sudo apt-get install clangd-12
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
+```
+- Install clangd for coc-clangd:
+```bash
+vim -c ":CocCommand clangd.install"
+```
+
 ## Setting up tmux
 
 1. Soft link the `tmux/.tmux.conf` to home directory. Automate the process by using `tmux/deploy.sh`.
